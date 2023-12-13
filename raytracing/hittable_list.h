@@ -20,7 +20,7 @@ public:
     void clear() { objects.clear(); }
 
     void add(shared_ptr<hittable> object) {
-        objects.push_back(object);
+        objects.emplace_back(object);
     }
 
     bool hit(const ray& r, interval ray_t, hit_record& rec) const override {
