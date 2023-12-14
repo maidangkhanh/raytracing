@@ -12,3 +12,13 @@ Anti aliasing
 Diffusion
 
 ![Demo02](demo/diffuse_shpere.png)
+
+
+Metal - Shiny
+
+![Demo03](demo/metal_shiny.png)
+
+
+Metal - Fuzzy
+
+![Demo04](demo/metal_fuzzy.png)
