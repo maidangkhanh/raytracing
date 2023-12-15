@@ -26,3 +26,9 @@ Metal - Fuzzy
 Glass
 
 ![Demo05](demo/glass_sphere.png)
+
+Camera Control
+
+![Demo06](demo/camera.png)
+![Demo07](demo/camera_zoomed.png)
+
