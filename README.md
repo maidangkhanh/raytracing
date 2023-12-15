@@ -11,7 +11,7 @@ Anti aliasing
 
 Diffusion
 
-![Demo02](demo/diffuse_shpere.png)
+![Demo02](demo/diffuse_sphere.png)
 
 
 Metal - Shiny
@@ -22,3 +22,7 @@ Metal - Shiny
 Metal - Fuzzy
 
 ![Demo04](demo/metal_fuzzy.png)
+
+Glass
+
+![Demo05](demo/glass_sphere.png)
