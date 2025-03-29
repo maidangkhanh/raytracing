@@ -38,9 +38,6 @@
     <ClInclude Include="hittable_list.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\raytracing\raytracing.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="raytracing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
