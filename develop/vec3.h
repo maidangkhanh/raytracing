@@ -1,8 +1,5 @@
 #pragma once
 
-#include <cmath>
-#include <iostream>
-
 using std::sqrt;
 
 class vec3
