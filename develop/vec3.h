@@ -52,6 +52,13 @@ public:
     {
         return vec3(rand_double(min, max), rand_double(min, max), rand_double(min, max));
     }
+
+    bool near_zero() const
+    {
+        // Return true if the vector is close to zero in all dimensions.
+        auto s = 1e-8;
+    return (std::fabs(e[0]) < s) && (std::fabs(e[1]) < s) && (std::fabs(e[2]) < s);
+    }
 };
 
 
