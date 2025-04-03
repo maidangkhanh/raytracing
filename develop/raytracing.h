@@ -27,6 +27,10 @@ inline double rand_double()
 	static std::mt19937 generator;
 	return distribution(generator);
 }
+inline double rand_double(double min, double max)
+{
+	return (min + (max - min) * rand_double());
+}
 
 // Common Headers
 
