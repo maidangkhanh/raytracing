@@ -3,6 +3,8 @@
 
 #include "interval.h"
 #include "vec3.h"
+#include <mutex>
+
 
 using color = vec3;
 
@@ -32,9 +34,6 @@ void write_color(std::ostream& out, color pixel_color)
 	int bbyte = int(256 * intensity.clamp(b));
 
 	// Write out the pixel color components.
-
-	out << rbyte << " " << gbyte << " " << bbyte << '\n';
+		out << rbyte << " " << gbyte << " " << bbyte << '\n';
 }
 #endif // !COLOR_H
-
-
