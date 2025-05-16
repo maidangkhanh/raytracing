@@ -163,8 +163,10 @@ private:
 
 		auto ray_origin = (defocus_angle <=0)? center: defocus_disk_sample();
 		auto ray_direction = pixel_sample - ray_origin;
+		auto ray_time = rand_double();
+
 		
-		return ray(ray_origin, ray_direction);
+		return ray(ray_origin, ray_direction, ray_time);
 	}
 
 	// Returns the vector to a random point in the [-.5,-.5]-[+.5,+.5] unit square.
