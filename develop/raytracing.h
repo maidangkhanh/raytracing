@@ -32,6 +32,11 @@ inline double rand_double(double min, double max)
 	return (min + (max - min) * rand_double());
 }
 
+inline int random_int(int min, int max) {
+	// Returns a random integer in [min,max].
+	return int(rand_double(min, max + 1));
+}
+
 // Common Headers
 
 #include "color.h"

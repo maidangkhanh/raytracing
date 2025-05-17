@@ -93,8 +93,6 @@ public:
 		}
 	}
 
-
-
 private:
 	int		image_height;	// Render image height
 	double pixel_samples_scale; // Color scale factor for a sum of pixel samples
