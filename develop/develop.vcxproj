@@ -141,6 +141,7 @@
     <ClInclude Include="material.h" />
     <ClInclude Include="ray.h" />
     <ClInclude Include="raytracing.h" />
+    <ClInclude Include="rtw_stb_image.h" />
     <ClInclude Include="sphere.h" />
     <ClInclude Include="texture.h" />
     <ClInclude Include="utils.h" />
