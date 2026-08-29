@@ -7,13 +7,19 @@
 
 class sphere : public hittable {
 public:
-    sphere(point3 _center, double _radius, shared_ptr<material> _material)
-        : center(_center), radius(_radius), mat(_material) {}
+    // Stationary Sphere
+    sphere(const point3& static_center, double _radius, shared_ptr<material> _material)
+        : center(static_center, vec3(0,0,0)), radius(std::fmax(0,radius)), mat(_material) {}
+
+    // Moving Sphere
+    sphere(const point3& _center1 ,const point3& _center2, double _radius, shared_ptr<material> _material)
+        : center(_center1, _center2), radius(std::fmax(0,radius)), mat(_material) {}
 
     bool hit(const ray& r, interval ray_t, hit_record& rec) const override {
-        vec3 oc = r.origin() - center;
+        point3 current_center = center.at(r.time());
+        vec3 oc = current_center - r.origin();
         auto a = r.direction().length_squared();
-        auto half_b = dot(oc, r.direction());
+        auto half_b = dot(r.direction(), oc);
         auto c = oc.length_squared() - radius * radius;
 
         auto discriminant = half_b * half_b - a * c;
@@ -30,7 +36,7 @@ public:
 
         rec.t = root;
         rec.p = r.at(rec.t);
-        vec3 outward_normal = (rec.p - center) / radius;
+        vec3 outward_normal = (rec.p - current_center) / radius;
         rec.set_face_normal(r, outward_normal);
         rec.mat = mat;
 
@@ -38,7 +44,7 @@ public:
     }
 
 private:
-    point3 center;
+    ray center;
     double radius;
     shared_ptr<material> mat;
 };
